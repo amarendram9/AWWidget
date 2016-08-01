@@ -1,0 +1,33 @@
+﻿<div class="widget-container" >
+<div class="wrapper">
+
+    <table >
+        <tr>
+            <td>
+                <!-- display region-->
+                <h4>{{jsonData.location.city}},{{jsonData.location.region}}</h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- display current temperature-->
+                <h1>{{jsonData.item.condition.temp}}&deg;</h1>
+            </td>
+            <td >
+                <!-- display image -->
+                <img src="{{jsonImage}}"><br>{{jsonData.item.condition.text}}
+            </td>
+        </tr>
+    </table>
+    <table>
+        <!-- display forecast day-->
+        <tr >
+            <td class="v-divider" ng-repeat="forecast in jsonData.item.forecast | limitTo:5" class="col-sm-9">&nbsp;{{forecast.day}}</td>
+        </tr>
+        <tr>
+            <!-- display 5 day temperature-->
+            <td class = "v-divider" ng-repeat="forecast in jsonData.item.forecast | limitTo:5" class="col-sm-9">&nbsp;{{forecast.high}}&deg;/{{forecast.low}}&deg;</td>
+        </tr>
+    </table>
+</div>
+</div>
