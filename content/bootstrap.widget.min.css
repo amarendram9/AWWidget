@@ -23,7 +23,7 @@
 .widget-container {
     border:solid;
     border-color: lightblue;
-    background-color: #eeeeee;
+    background-color: lightgrey;
     width:30%;
     align-content: center;
     margin-right: auto;
